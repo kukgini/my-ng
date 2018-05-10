@@ -6,14 +6,15 @@
     </div>
   </div>
 
-  <div class="form-group col-md-4">
-    <label for="inputState">도서 종류</label>
-    <select id="inputState" class="form-control">
-      <option selected>선택하세요...</option>
-      <option>국내외도서</option>
-      <option>국내도서</option>
-      <option>국외도서</option>
-    </select>
+  <div class="example-container">
+    <mat-form-field>
+      <mat-select placeholder="도서종류" [(ngModel)]="selectedValue">
+        <mat-option *ngFor="let category of bookCaterory"
+                    [value]="category.value">
+          {{ category.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
 
   <div>

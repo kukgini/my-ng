@@ -16,6 +16,10 @@ import { FormsModule} from '@angular/forms';
 
 import { COMPOSITION_BUFFER_MODE } from '@angular/forms';
 
+import { MatSelectModule } from '@angular/material/select';
+
+import { HttpClientModule } from "@angular/common/http";
+
 @NgModule({
   imports: [
     CommonModule,
@@ -24,7 +28,9 @@ import { COMPOSITION_BUFFER_MODE } from '@angular/forms';
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule,
+    HttpClientModule
   ],
   providers: [
     {

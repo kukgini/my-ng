@@ -1,4 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+interface IBook {
+  bauthor: string;
+  bdate: string;
+  btranslator: string;
+  bpublisher: string;
+  btitle: string;
+  bprice: number;
+  bisbn: string;
+  bimgurl: string;
+}
 
 @Component({
   selector: 'app-list-box',
@@ -7,7 +19,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListBoxComponent implements OnInit {
 
-  constructor() { }
+  books: IBook[];
+
+  constructor(private http: HttpClient) {
+    this.http.get<IBook[]>('assets/data/book.json')
+      .subscribe(res => this.books = res);
+  }
 
   ngOnInit() {
   }
