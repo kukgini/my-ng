@@ -1,7 +1,8 @@
 <div class="example-container">
-  <mat-toolbar class="search-toolbar-style">Search Keyword : </mat-toolbar>
+  <mat-toolbar class="search-toolbar-style">Search Keyword : {{ keyword }}</mat-toolbar>
   <mat-form-field>
-    <input matInput placeholder="Search Keyword">
+    <input matInput #inputKeyword placeholder="Search Keyword">
   </mat-form-field>
-  <button mat-raised-button color="warn">Search!</button>
+  <button mat-raised-button color="warn"
+    (click)="setKeyword(inputKeyword.value)">Search!</button>
 </div>

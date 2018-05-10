@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBoxComponent implements OnInit {
 
+  keyword = 'java';
+  
   constructor() { }
 
   ngOnInit() {
   }
 
+  setKeyword(keyword: string): void {
+    this.keyword = keyword;
+  }
 }

@@ -10,14 +10,22 @@ import { MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { MatCardModule } from '@angular/material/card';
+
 @NgModule({
   imports: [
     CommonModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
-  declarations: [BookSearchMainComponent, SearchBoxComponent, DetailBoxComponent, ListBoxComponent]
+  declarations: [
+    BookSearchMainComponent, 
+    SearchBoxComponent, 
+    DetailBoxComponent, 
+    ListBoxComponent
+  ]
 })
 export class BookSearchModule { }
