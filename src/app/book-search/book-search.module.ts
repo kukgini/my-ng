@@ -12,6 +12,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { MatCardModule } from '@angular/material/card';
 
+import { FormsModule} from '@angular/forms';
+
+import { COMPOSITION_BUFFER_MODE } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -19,7 +23,14 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
+  ],
+  providers: [
+    {
+      provide: COMPOSITION_BUFFER_MODE,
+      useValue: false
+    }
   ],
   declarations: [
     BookSearchMainComponent, 

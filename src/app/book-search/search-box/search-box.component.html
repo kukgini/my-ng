@@ -1,7 +1,8 @@
 <div class="example-container">
   <mat-toolbar class="search-toolbar-style">Search Keyword : {{ keyword }}</mat-toolbar>
   <mat-form-field>
-    <input matInput #inputKeyword placeholder="Search Keyword">
+    <input matInput #inputKeyword placeholder="Search Keyword"
+        [(ngModel)]="keyword" (ngModelChange)="inputChanged()">
   </mat-form-field>
   <button mat-raised-button color="warn"
     (click)="setKeyword(inputKeyword.value)">Search!</button>
